@@ -23,18 +23,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let fileURL = NSURL(fileURLWithPath: soundFilePath)
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: fileURL)
-        } catch
-        { print("音楽ファイルが読み込めませんでした")
-            
+        } catch { print("音楽ファイルが読み込めませんでした")
         }
+        
         clapPickerView.delegate = self
         clapPickerView.dataSource = self
         
-        }
+    }
     func numberOfComponentsInPickerView(PickerView: UIPickerView) -> Int{
         return 1
     }
-    func pickerView(pickerView: UIPickerView, numberPfRowsinComponent component: Int) -> Int{
+    func pickerView(pickerView: UIPickerView, numberOfRowsinComponent component: Int) -> Int{
         return 10
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{

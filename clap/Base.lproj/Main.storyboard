@@ -17,20 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lId-1P-4Pq">
+                                <rect key="frame" x="0.0" y="418" width="375" height="216"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWp-pT-FpA">
                                 <rect key="frame" x="125" y="203" width="125" height="100"/>
                                 <state key="normal" title="Button" image="clap-button.png"/>
                                 <connections>
-                                    <action selector="playbutton" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbr-U6-RMC"/>
+                                    <action selector="playButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Te7-AY-h12"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lId-1P-4Pq">
-                                <rect key="frame" x="0.0" y="418" width="375" height="216"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="clapPickerView" destination="lId-1P-4Pq" id="thj-lW-sxm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
